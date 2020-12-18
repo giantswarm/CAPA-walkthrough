@@ -1,0 +1,221 @@
+apiVersion: application.giantswarm.io/v1alpha1
+kind: App
+metadata:
+  annotations:
+    chart-operator.giantswarm.io/force-helm-upgrade: "true"
+  labels:
+    app: metrics-server
+    app-operator.giantswarm.io/helm-major-version: "3"
+    app-operator.giantswarm.io/version: 0.0.0
+  name: metrics-server
+spec:
+  catalog: giantswarm-default
+  config:
+    configMap:
+      name: ""
+      namespace: ""
+    secret:
+      name: ""
+      namespace: ""
+  kubeConfig:
+    context:
+      name: capi-quickstart-admin@capi-quickstart
+    inCluster: false
+    secret:
+      name: cluster-01-kubeconfig
+      namespace: cluster-01
+  name: metrics-server-app
+  namespace: kube-system
+  userConfig:
+    configMap:
+      name: ""
+      namespace: ""
+    secret:
+      name: ""
+      namespace: ""
+  version: 1.2.1
+---
+apiVersion: application.giantswarm.io/v1alpha1
+kind: App
+metadata:
+  annotations:
+    chart-operator.giantswarm.io/force-helm-upgrade: "true"
+  labels:
+    app: cert-manager
+    app-operator.giantswarm.io/helm-major-version: "3"
+    app-operator.giantswarm.io/version: 0.0.0
+  name: cert-manager
+spec:
+  catalog: giantswarm-default
+  config:
+    configMap:
+      name: ""
+      namespace: ""
+    secret:
+      name: ""
+      namespace: ""
+  kubeConfig:
+    context:
+      name: capi-quickstart-admin@capi-quickstart
+    inCluster: false
+    secret:
+      name: cluster-01-kubeconfig
+      namespace: cluster-01
+  name: cert-manager-app
+  namespace: kube-system
+  userConfig:
+    configMap:
+      name: ""
+      namespace: ""
+    secret:
+      name: ""
+      namespace: ""
+  version: 2.3.3
+---
+apiVersion: application.giantswarm.io/v1alpha1
+kind: App
+metadata:
+  annotations:
+    chart-operator.giantswarm.io/force-helm-upgrade: "true"
+  labels:
+    app: nginx-ingress-controller
+    app-operator.giantswarm.io/helm-major-version: "3"
+    app-operator.giantswarm.io/version: 0.0.0
+  name: nginx-ingress-controller
+spec:
+  catalog: giantswarm-default
+  config:
+    configMap:
+      name: ""
+      namespace: ""
+    secret:
+      name: ""
+      namespace: ""
+  kubeConfig:
+    context:
+      name: capi-quickstart-admin@capi-quickstart
+    inCluster: false
+    secret:
+      name: cluster-01-kubeconfig
+      namespace: cluster-01
+  name: nginx-ingress-controller-app
+  namespace: kube-system
+  userConfig:
+    configMap:
+      name: ""
+      namespace: ""
+    secret:
+      name: ""
+      namespace: ""
+  version: 1.12.0
+---
+apiVersion: application.giantswarm.io/v1alpha1
+kind: App
+metadata:
+  annotations:
+    chart-operator.giantswarm.io/force-helm-upgrade: "true"
+  labels:
+    app: prometheus-operator
+    app-operator.giantswarm.io/helm-major-version: "3"
+    app-operator.giantswarm.io/version: 0.0.0
+  name: prometheus-operator
+spec:
+  catalog: giantswarm-default
+  config:
+    configMap:
+      name: ""
+      namespace: ""
+    secret:
+      name: ""
+      namespace: ""
+  kubeConfig:
+    context:
+      name: capi-quickstart-admin@capi-quickstart
+    inCluster: false
+    secret:
+      name: cluster-01-kubeconfig
+      namespace: cluster-01
+  name: prometheus-operator-app
+  namespace: monitoring
+  userConfig:
+    configMap:
+      name: ""
+      namespace: ""
+    secret:
+      name: ""
+      namespace: ""
+  version: 0.4.0
+---
+apiVersion: application.giantswarm.io/v1alpha1
+kind: App
+metadata:
+  annotations:
+    chart-operator.giantswarm.io/force-helm-upgrade: "true"
+  labels:
+    app: node-exporter
+    app-operator.giantswarm.io/helm-major-version: "3"
+    app-operator.giantswarm.io/version: 0.0.0
+  name: node-exporter
+spec:
+  catalog: giantswarm-default
+  config:
+    configMap:
+      name: ""
+      namespace: ""
+    secret:
+      name: ""
+      namespace: ""
+  kubeConfig:
+    context:
+      name: capi-quickstart-admin@capi-quickstart
+    inCluster: false
+    secret:
+      name: cluster-01-kubeconfig
+      namespace: cluster-01
+  name: node-exporter-app
+  namespace: kube-system
+  userConfig:
+    configMap:
+      name: ""
+      namespace: ""
+    secret:
+      name: ""
+      namespace: ""
+  version: 1.7.1
+---
+apiVersion: application.giantswarm.io/v1alpha1
+kind: App
+metadata:
+  annotations:
+    chart-operator.giantswarm.io/force-helm-upgrade: "true"
+  labels:
+    app: loki-stack
+    app-operator.giantswarm.io/helm-major-version: "3"
+    app-operator.giantswarm.io/version: 0.0.0
+  name: loki-stack
+spec:
+  catalog: giantswarm-playground
+  config:
+    configMap:
+      name: ""
+      namespace: ""
+    secret:
+      name: ""
+      namespace: ""
+  kubeConfig:
+    context:
+      name: capi-quickstart-admin@capi-quickstart
+    inCluster: false
+    secret:
+      name: cluster-01-kubeconfig
+      namespace: cluster-01
+  name: loki-stack-app
+  namespace: monitoring
+  userConfig:
+    configMap:
+      name: ""
+      namespace: ""
+    secret:
+      name: ""
+      namespace: ""
+  version: 0.2.1

@@ -1,0 +1,36 @@
+apiVersion: application.giantswarm.io/v1alpha1
+kind: App
+metadata:
+  annotations:
+    chart-operator.giantswarm.io/force-helm-upgrade: "true"
+  labels:
+    app: chart-operator
+    app-operator.giantswarm.io/helm-major-version: "3"
+    app-operator.giantswarm.io/version: 0.0.0
+  name: chart-operator
+spec:
+  catalog: giantswarm-default
+  config:
+    configMap:
+      name: ""
+      namespace: ""
+    secret:
+      name: ""
+      namespace: ""
+  kubeConfig:
+    context:
+      name: capi-quickstart-admin@capi-quickstart
+    inCluster: false
+    secret:
+      name: cluster-01-kubeconfig
+      namespace: cluster-01
+  name: chart-operator
+  namespace: giantswarm
+  userConfig:
+    configMap:
+      name: ""
+      namespace: ""
+    secret:
+      name: ""
+      namespace: ""
+  version: 2.5.2

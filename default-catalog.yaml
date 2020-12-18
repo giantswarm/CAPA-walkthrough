@@ -1,0 +1,22 @@
+apiVersion: application.giantswarm.io/v1alpha1
+kind: AppCatalog
+metadata:
+  labels:
+    app-operator.giantswarm.io/version: 1.0.0
+    application.giantswarm.io/catalog-type: stable
+    application.giantswarm.io/catalog-visibility: public
+  name: giantswarm-default
+spec:
+  config:
+    configMap:
+      name: ""
+      namespace: ""
+    secret:
+      name: ""
+      namespace: ""
+  description: 'This catalog holds Apps managed by Giant Swarm'
+  logoURL: /images/repo_icons/giantswarm.png
+  storage:
+    URL: https://giantswarm.github.io/default-catalog/
+    type: helm
+  title: Giant Swarm Default Catalog

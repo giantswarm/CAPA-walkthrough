@@ -1,0 +1,24 @@
+apiVersion: application.giantswarm.io/v1alpha1
+kind: AppCatalog
+metadata:
+  creationTimestamp: "2020-07-17T07:56:22Z"
+  finalizers:
+  - operatorkit.giantswarm.io/app-operator
+  generation: 1
+  labels:
+    app-operator.giantswarm.io/version: 1.0.0
+    application.giantswarm.io/catalog-type: test
+    application.giantswarm.io/catalog-visibility: public
+  name: giantswarm-playground
+  resourceVersion: "108160717"
+  selfLink: /apis/application.giantswarm.io/v1alpha1/appcatalogs/giantswarm-playground
+  uid: 175b752c-ae49-4dfc-afb7-7a82e7e1074f
+spec:
+  config: {}
+  description: This catalog holds applications that are not covered by any support
+    plan. Still, we try to make them install and run on Giant Swarm smoothly!
+  logoURL: /images/repo_icons/incubator.png
+  storage:
+    URL: https://giantswarm.github.io/giantswarm-playground-catalog/
+    type: helm
+  title: Giant Swarm Playground
