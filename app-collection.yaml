@@ -78,10 +78,10 @@ metadata:
   annotations:
     chart-operator.giantswarm.io/force-helm-upgrade: "true"
   labels:
-    app: nginx-ingress-controller
+    app: ingress-nginx
     app-operator.giantswarm.io/helm-major-version: "3"
     app-operator.giantswarm.io/version: 0.0.0
-  name: nginx-ingress-controller
+  name: ingress-nginx
 spec:
   catalog: giantswarm-default
   config:
@@ -98,7 +98,7 @@ spec:
     secret:
       name: cluster-01-kubeconfig
       namespace: cluster-01
-  name: nginx-ingress-controller-app
+  name: ingress-nginx
   namespace: kube-system
   userConfig:
     configMap:
@@ -107,7 +107,7 @@ spec:
     secret:
       name: ""
       namespace: ""
-  version: 1.12.0
+  version: 3.0.0
 ---
 apiVersion: application.giantswarm.io/v1alpha1
 kind: App

@@ -36,7 +36,7 @@ k --kubeconfig=./capi-quickstart.kubeconfig \
   label node ip-10-0-186-81.eu-central-1.compute.internal kubernetes.io/role=master
 ```
 
-Install a small app collection (metrics-server, cert-manager, nginx-ingress, prometheus-operator, and loki)
+Install a small app collection (metrics-server, cert-manager, ingress-nginx, prometheus-operator, and loki)
 
 ```
 k -n cluster-01 apply -f app-collection.yaml
